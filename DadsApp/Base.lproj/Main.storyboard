@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DadsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,78 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap an image to enlarge it." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="4q5-OO-TuE">
+                                <rect key="frame" x="0.0" y="25" width="375" height="66.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="I0b-QF-nDK">
+                                <rect key="frame" x="0.0" y="91" width="375" height="575.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xi6-3C-Ylc">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="YyV-ae-pfu" customClass="ImageCell" customModule="DadsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8bK-zD-MdI">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="75"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="9u8-OM-BEI">
+                                                    <rect key="frame" x="0.0" y="75" width="100" height="25"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="8bK-zD-MdI" firstAttribute="top" secondItem="YyV-ae-pfu" secondAttribute="top" id="5QQ-tT-ynd"/>
+                                            <constraint firstAttribute="trailing" secondItem="9u8-OM-BEI" secondAttribute="trailing" id="CnX-mh-wRj"/>
+                                            <constraint firstItem="9u8-OM-BEI" firstAttribute="leading" secondItem="YyV-ae-pfu" secondAttribute="leading" id="DDS-MF-bzG"/>
+                                            <constraint firstAttribute="bottom" secondItem="9u8-OM-BEI" secondAttribute="bottom" id="go7-ub-hoK"/>
+                                            <constraint firstItem="8bK-zD-MdI" firstAttribute="leading" secondItem="YyV-ae-pfu" secondAttribute="leading" id="vGV-lU-uTg"/>
+                                            <constraint firstItem="8bK-zD-MdI" firstAttribute="height" secondItem="YyV-ae-pfu" secondAttribute="height" multiplier="0.75" id="wB0-Q3-7Mu"/>
+                                            <constraint firstAttribute="trailing" secondItem="8bK-zD-MdI" secondAttribute="trailing" id="ztU-fM-3mx"/>
+                                            <constraint firstItem="9u8-OM-BEI" firstAttribute="top" secondItem="8bK-zD-MdI" secondAttribute="bottom" id="zvy-bI-qTP"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="8bK-zD-MdI" id="sw6-9S-ORH"/>
+                                            <outlet property="nameLabel" destination="9u8-OM-BEI" id="LfJ-RJ-izS"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4q5-OO-TuE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8Ay-ck-lH5"/>
+                            <constraint firstAttribute="trailing" secondItem="4q5-OO-TuE" secondAttribute="trailing" id="NBL-MZ-jfR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="I0b-QF-nDK" secondAttribute="bottom" id="Pc4-nq-lfc"/>
+                            <constraint firstAttribute="trailing" secondItem="I0b-QF-nDK" secondAttribute="trailing" id="cBR-NF-TH3"/>
+                            <constraint firstItem="4q5-OO-TuE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="fIY-Kh-LZ9"/>
+                            <constraint firstItem="I0b-QF-nDK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rCM-gG-4Qz"/>
+                            <constraint firstItem="I0b-QF-nDK" firstAttribute="top" secondItem="4q5-OO-TuE" secondAttribute="bottom" id="y5W-eA-UKF"/>
+                            <constraint firstItem="4q5-OO-TuE" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="zxO-vO-IuQ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="I0b-QF-nDK" id="g2z-gU-e0j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
         </scene>
     </scenes>
 </document>

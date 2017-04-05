@@ -14,6 +14,8 @@
 		87F5DBE21E951D8300E629D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F5DBE01E951D8300E629D2 /* LaunchScreen.storyboard */; };
 		87F5DBED1E951D8300E629D2 /* DadsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F5DBEC1E951D8300E629D2 /* DadsAppTests.swift */; };
 		87F5DBF81E951D8300E629D2 /* DadsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F5DBF71E951D8300E629D2 /* DadsAppUITests.swift */; };
+		87F5DC061E952B8D00E629D2 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F5DC051E952B8D00E629D2 /* ImageCell.swift */; };
+		87F5DC3D1E95309900E629D2 /* DadsImages in Resources */ = {isa = PBXBuildFile; fileRef = 87F5DC3C1E95309900E629D2 /* DadsImages */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		87F5DBF31E951D8300E629D2 /* DadsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DadsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87F5DBF71E951D8300E629D2 /* DadsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DadsAppUITests.swift; sourceTree = "<group>"; };
 		87F5DBF91E951D8300E629D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87F5DC051E952B8D00E629D2 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		87F5DC3C1E95309900E629D2 /* DadsImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DadsImages; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +103,12 @@
 			children = (
 				87F5DBD71E951D8300E629D2 /* AppDelegate.swift */,
 				87F5DBD91E951D8300E629D2 /* ViewController.swift */,
+				87F5DC051E952B8D00E629D2 /* ImageCell.swift */,
 				87F5DBDB1E951D8300E629D2 /* Main.storyboard */,
 				87F5DBDE1E951D8300E629D2 /* Assets.xcassets */,
 				87F5DBE01E951D8300E629D2 /* LaunchScreen.storyboard */,
 				87F5DBE31E951D8300E629D2 /* Info.plist */,
+				87F5DC3C1E95309900E629D2 /* DadsImages */,
 			);
 			path = DadsApp;
 			sourceTree = "<group>";
@@ -235,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87F5DC3D1E95309900E629D2 /* DadsImages in Resources */,
 				87F5DBE21E951D8300E629D2 /* LaunchScreen.storyboard in Resources */,
 				87F5DBDF1E951D8300E629D2 /* Assets.xcassets in Resources */,
 				87F5DBDD1E951D8300E629D2 /* Main.storyboard in Resources */,
@@ -264,6 +271,7 @@
 			files = (
 				87F5DBDA1E951D8300E629D2 /* ViewController.swift in Sources */,
 				87F5DBD81E951D8300E629D2 /* AppDelegate.swift in Sources */,
+				87F5DC061E952B8D00E629D2 /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
